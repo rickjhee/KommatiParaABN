@@ -1,6 +1,5 @@
-from pyspark.sql import SparkSession
+import findspark
+findspark.init()
 
-spark = (SparkSession.builder
-  .master("local")
-  .appName("chispa")
-  .getOrCreate())
+import pyspark
+sc = pyspark.SparkContext()
